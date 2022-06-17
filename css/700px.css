@@ -1,0 +1,70 @@
+@media only screen and (max-width:700px) {
+    #ferrari {
+        width: 50%;
+    }
+    .buttons {
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+    .buttons button {
+        margin: 10px;
+    }
+    .nazov {
+        font-size: 2em;
+        padding: 10px 5px;
+        padding-top: 300px;
+    }
+    .text {
+        padding: 0px;
+    }
+    #custom-container {
+        width: 70%;
+    }
+    #gallery-review {
+        max-width: 100%;
+        height: auto;
+    }
+    .p-2 {
+        width: 100%;
+    }
+    .text-p,
+    .text-p-zmena {
+        padding: 10px 40px !important;
+        text-align: center;
+        font-size: 1em;
+        text-align: justify;
+    }
+    .text-700px {
+        height: 100vh !important;
+    }
+    div.text-zmena {
+        background-color: rgb(40, 46, 52) !important;
+    }
+    .inputPX {
+        width: 80px;
+    }
+    .none {
+        padding: 10px;
+    }
+    h1 {
+        color: chocolate;
+    }
+    .text-p,
+    .buttons,
+    div.text,
+    footer {
+        background-color: rgb(26, 30, 39);
+        color: wheat;
+    }
+    .form-style {
+        width: 100%;
+        height: 100vh;
+        border-radius: 0px;
+    }
+    .db-table {
+        width: 100%;
+    }
+    .insertInfo {
+        width: 70%;
+    }
+}

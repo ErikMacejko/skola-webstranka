@@ -1,0 +1,367 @@
+/* NIEKTORE VECI, KTORE SA OPAKUJU NAPR. PRI RESPONZIVITE SOM OKOMENTOVAL LEN RAZ, KEDZE TO PLNI STALE TU ISTU FUNKCIU */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Roboto+Condensed:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto+Condensed:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+p {
+    font-size: 15px;
+}
+
+nav {
+    height: 6vh;
+    background-color: rgb(10, 11, 15, 0.89);
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+/* nastavenie ul elementu, vsetky jeho child elementy su zoradene vedla seba pomocou flex, 
+   vycentrovane horizontalne v strede  */
+
+.nav-links {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    margin-left: auto;
+}
+
+
+/* Nastavim parametre li */
+
+.nav-links li {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding: 5px 5px;
+    border-radius: 50px;
+    margin-right: 10px;
+}
+
+.nav-links li.domov {
+    background-color: #4885ed;
+}
+
+
+/* Nastavim hover cize po prejdeni myskou na li element*/
+
+.nav-links li:hover {
+    background-color: rgb(255, 255, 255, 0.9);
+}
+
+
+/* Nastavim parametre a */
+
+.nav-links a {
+    position: relative;
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    padding: 0 10px;
+}
+
+
+/* Tu som si vytvoril animaciu na hover efekt, po hovernuti sa objavi dole ciara ktora prejde zlava doprava po dobu 0.8sec 
+   pri a::hover::after som nastavil jej dlzku na 100% cize prejde pod celym elementom li>a, tento efekt sa vytvara len pri navbar menu */
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    background-color: #f4c20d;
+    height: 2px;
+    width: 0;
+    left: 10%;
+    bottom: -5px;
+    transition: 0.8s;
+}
+
+.nav-links a:hover::after {
+    width: 80%;
+    left: 10%;
+}
+
+.buttons {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    background-color: rgb(40, 46, 52);
+}
+
+.buttons button {
+    margin-left: 6px;
+}
+
+#buttons-custom {
+    padding-top: 30px;
+}
+
+#buttons-custom>button {
+    margin-left: 10px;
+}
+
+.bold,
+i {
+    font-weight: 600;
+    color: #3767af;
+}
+
+#carousel-img {
+    margin: 0 auto;
+    padding-left: 25%;
+}
+
+.gallery {
+    padding: 80px 0;
+}
+
+.gallery-item {
+    max-width: 100%;
+}
+
+.gallery img {
+    background-color: rgb(15, 15, 15);
+    padding: 5px;
+    box-shadow: 0 0 15px rgb(10, 11, 15, 0.7);
+    cursor: pointer;
+}
+
+#gallery-modal .modal-img {
+    width: 100%;
+}
+
+.modal-body {
+    background-color: rgb(15, 15, 15);
+}
+
+.parallax-first {
+    opacity: 0.9;
+    min-height: 500px;
+    /* Tu sa vytvara parallax scrolling efekt */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.parallax-second {
+    opacity: 0.9;
+    min-height: 500px;
+    /* Tu sa vytvara parallax scrolling efekt */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -16px !important;
+}
+
+.parallax-second-zmena {
+    opacity: 0.9;
+    min-height: 80vh;
+    /* Tu sa vytvara parallax scrolling efekt */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -16px !important;
+}
+
+.parallax-third,
+.parallax-fourth {
+    opacity: 0.9;
+    min-height: 550px;
+    /* Tu sa vytvara parallax scrolling efekt */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -16px !important;
+}
+
+.parallax-fifth {
+    opacity: 0.9;
+    min-height: 100vh;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -16px !important;
+}
+
+.intro-text {
+    color: white;
+    text-shadow: 3px 3px #000000;
+}
+
+.page-name {
+    text-align: center;
+    padding-top: 50px;
+    font-size: 80px;
+    height: auto;
+    padding-top: 350px;
+    color: whitesmoke;
+    text-shadow: 3px 3px #000000;
+}
+
+h1 {
+    color: chocolate;
+}
+
+.text-p {
+    font-family: 'Merriweather', serif;
+    font-size: 17px;
+    padding: 50px 80px;
+    text-align: justify;
+}
+
+.text-p,
+.buttons,
+div.text,
+footer {
+    background-color: rgb(26, 30, 39);
+    color: rgb(160, 172, 184);
+}
+
+div.text>h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 64px;
+}
+
+div.text-zmena {
+    color: white;
+}
+
+.p-2 {
+    margin-top: 500px;
+}
+
+footer {
+    text-align: center;
+    height: auto;
+    padding: 20px;
+    bottom: 0;
+    width: 100%;
+}
+
+.hover-logo {
+    width: 250px;
+    margin: 0 auto;
+}
+
+.hover-logo:hover,
+.hover-logo:focus,
+.hover-logo:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.2);
+}
+
+.rotate {
+    -webkit-animation: flip-horizontal-bottom 0.6s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    animation: flip-horizontal-bottom 0.6s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+
+@keyframes flip-horizontal-bottom {
+    0% {
+        -webkit-transform: rotateX(-180deg);
+        transform: rotateX(-180deg);
+    }
+    100% {
+        -webkit-transform: rotateX(0);
+        transform: rotateX(0);
+    }
+}
+
+
+/* tu zacina responzivita LEN pre zariadenie s width:1250px/height:750px */
+
+@media only screen and (min-width:1400px) and (max-width:1400px) and (min-height:1000px) and (max-height:1000px) {
+    .nav-links li a {
+        color: white;
+        text-decoration: none;
+        font-size: 30px;
+    }
+}
+
+
+/* tu zacina responzivita LEN pre zariadenie s width:1250px/height:750px */
+
+@media only screen and (min-width:1250px) and (max-width:1250px) and (min-height:750px) and (max-height:750px) {
+    .parallax-first {
+        display: none;
+    }
+}
+
+
+/* tu zacina responzivita LEN pre zariadenie s width:750px/height:500px */
+
+@media only screen and (min-width:750px) and (max-width:750px) and (min-height:500px) and (max-height:500px) {}
+
+
+/* tu zacina responzivita LEN pre zariadenie s max width:500px/height:230px */
+
+@media only screen and (min-width:500px) and (max-width:500px) and (min-height:230px) and (max-height:230px) {
+    /* Line nastavim biele pozadie, vysku a sirku, su to 3 ciary hamburger baru  */
+    nav {
+        /* zmena z 30px */
+        height: 50px;
+    }
+    /* responzivne nastavenie navbaru s animaciou aby sa zobrazovali v stlpci vpravo na 100% sirky zariadenia */
+    .nav-links {
+        /* Treba nastavit !important pretoze to narobi "bordel", kedze v .css na 700px a 900px mame ine hodnoty pre width a left 
+            nastavil som sirku navbaru na cele zariadenie 
+        */
+        width: 100% !important;
+        left: 0% !important;
+    }
+    .nav-links li a {
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+    }
+    /* potreboval som zvacsit vysku divu kvoli tomu ze obrazok prekryval footer */
+    #custom-container {
+        height: 200vh;
+    }
+    #gallery-review {
+        margin-top: -220px !important;
+    }
+}
+
+@media only screen and (min-height:900px) {
+    /* potreboval som nastavit pre zariadenia co maju velku height aby sa vyrollovalo navbar menu az po spodok obrazovky, 
+       pretoze sa potom nedalo dostat na sekciu Zmena. 
+       Cize trebalo zvacsit px u clip-path, robilo to problem napr pri Ipade, Ipad Pro a podobne*/
+    .nav-links.open {
+        clip-path: circle(2000px at 50% -30%) !important;
+        -webkit-clip-path: circle(2000px at 50% -30%) !important;
+    }
+}

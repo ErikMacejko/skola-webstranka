@@ -1,0 +1,56 @@
+@media only screen and (max-width:900px) {
+    /* Line nastavim biele pozadie, vysku a sirku, su to 3 ciary hamburger baru  */
+    .line {
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        margin: 7px;
+    }
+    nav {
+        position: relative;
+        opacity: 1;
+    }
+    /* Nastavim si polohu hamburger menu na pravu stranu a pomocou transform ho dam na stred */
+    .hamburger {
+        position: absolute;
+        cursor: pointer;
+        right: 7%;
+        top: 50%;
+        transform: translate(-7%, -50%);
+        z-index: 2;
+    }
+    /* responzivne nastavenie navbaru s animaciou aby sa zobrazovali v stlpci vpravo na 30% sirky zariadenia */
+    .nav-links {
+        position: fixed;
+        background-color: rgb(10, 11, 15, 0.9);
+        height: 100vh;
+        width: 45%;
+        left: 55%;
+        justify-content: space-around;
+        flex-direction: column;
+        clip-path: circle(20px at 90% -10%);
+        -webkit-clip-path: circle(20px at 90% -10%);
+        transition: all 0.5s ease-out;
+    }
+    .nav-links li a {
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+    }
+    /* toto je classa ktora sa spusti v javascripte a spusti animaciu na "vyrollovanie" hamburger menu */
+    .nav-links.open {
+        clip-path: circle(1000px at 50% -10%);
+        -webkit-clip-path: circle(1000px at 50% -10%);
+    }
+    .parallax-first {
+        display: none !important;
+    }
+    .text-p {
+        font-size: 1.2em;
+        color: rgb(185, 185, 185);
+        padding: 80px;
+    }
+    .form-style {
+        overflow: auto;
+    }
+}

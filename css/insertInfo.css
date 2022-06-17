@@ -1,0 +1,86 @@
+:root {
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-gray-100: #f8f9fa;
+    --bs-gray-200: #e9ecef;
+    --bs-gray-300: #dee2e6;
+    --bs-gray-400: #ced4da;
+    --bs-gray-500: #adb5bd;
+    --bs-gray-600: #6c757d;
+    --bs-gray-700: #495057;
+    --bs-gray-800: #343a40;
+    --bs-gray-900: #212529;
+}
+
+.input-formular {
+    text-align: center;
+    height: 100vh;
+}
+
+.form-style {
+    display: block;
+    margin: 0 auto;
+    width: 430px;
+    border-radius: 18px;
+    height: 90vh;
+}
+
+.insertInfo {
+    height: 70px;
+    width: 300px;
+    border-radius: 3px;
+    border: 2px solid #e9ecef;
+    background-color: #f8f9fa;
+    text-align: center;
+    margin-top: 15px;
+    color: #212529;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.h4 {
+    border-bottom: 2px solid #fdd319;
+    margin: 2px;
+}
+
+div.h4>h4 {
+    color: #fdd319;
+    font-size: 40px;
+}
+
+input::placeholder {
+    color: #212529;
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+span {
+    width: 150px;
+    color: #212529;
+    font-style: italic;
+}
+
+#inputToDB {
+    height: 35px;
+    border-radius: 18px;
+    border: none;
+    background-color: #0d6efd;
+    text-align: center;
+    color: #f8f9fa;
+    font-weight: bold;
+    width: 150px;
+    height: 50px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}

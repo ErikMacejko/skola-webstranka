@@ -1,0 +1,81 @@
+    /****PREMENNE****/
+    
+    $databaseColor: #3161aa;
+    $tableText: #2e2e2e;
+    $orderArrow: "\25b4";
+    $whiteColor: white;
+    $margin150: 150px;
+    /******************/
+    
+    @mixin margin150 {
+        margin-top: 150px;
+        margin-bottom: 150px;
+    }
+    
+    .div-for-table {
+        text-align: center;
+        overflow: auto;
+        height: 100vh
+    }
+    
+    .db-table {
+        margin: 0 auto;
+        width: 50%;
+        @include margin150();
+    }
+    /**** HLAVICKA TABULKY ****/
+    
+    .db-table>thead {
+        background-color: rgba($databaseColor, .7);
+        color: $whiteColor;
+        tr>th {
+            padding: 10px;
+            cursor: pointer;
+            border-bottom: 3px solid $whiteColor;
+        }
+        .th-sort-asc::after {
+            content: $orderArrow;
+        }
+        .th-sort-desc::after {
+            content: $orderArrow;
+        }
+    }
+    /**** TELO TABULKY ****/
+    
+    .db-table>tbody {
+        tr>td {
+            padding: 10px;
+            font-family: 'Open Sans Condensed', sans-serif;
+            border: 1px solid $whiteColor;
+            color: $tableText;
+        }
+        tr>td:nth-child(1) {
+            padding-left: 15px;
+            width: 250px;
+            text-align: left;
+            border-right: none;
+            font-weight: bold;
+            border-left: none;
+        }
+        tr>td:nth-child(6) {
+            border-right: none;
+            width: 10px;
+        }
+        tr:nth-child(odd) {
+            background-color: #b0bac4;
+        }
+        tr:nth-child(even) {
+            background-color: #dee2e6;
+        }
+        tr>td:hover {
+            background-color: #7db1ff;
+            color: $whiteColor;
+        }
+        tr>td>a>button {
+            background-color: $databaseColor;
+        }
+    }
+    
+    #inputToDB {
+        background-color: $databaseColor;
+    }
